@@ -9,6 +9,7 @@ sudo apt remove -y firefox-esr
 #theme changes
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+echo "PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin" >> ~/.bashrc
 gnome-extensions enable ubuntu-appindicators@ubuntu.com
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 gsettings set org.gnome.desktop.interface icon-theme "Yaru-purple-dark"
