@@ -3,8 +3,11 @@
 #uncheck gnome and standard desktop
 
 #packages
-sudo apt install -y gnome-core command-not-found flatpak gnome-shell-extension-dashtodock git yaru-theme-icon yaru-theme-gnome-shell gnome-shell-extension-appindicator gnome-tweaks net-tools
-sudo apt remove -y firefox-esr
+sudo apt update
+sudo apt install -y gnome-core command-not-found flatpak gnome-shell-extension-dashtodock git yaru-theme-icon yaru-theme-gnome-shell gnome-shell-extension-appindicator gnome-tweaks net-tools software-properties-common
+sudo apt purge -y firefox-esr
+sudo apt-add-repository --component non-free contrib non-free-firmware -y
+
 
 #other changes
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
