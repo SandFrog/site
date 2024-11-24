@@ -1,6 +1,6 @@
 #!/bin/bash
 #last tested on debian 12
-#uncheck gnome and standard desktop
+#uncheck all boxes
 
 #packages
 sudo apt update
@@ -26,9 +26,10 @@ gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 42
 gsettings set org.gnome.shell.extensions.dash-to-dock custom-theme-shrink true
 
 #flatpaks
+sudo -v
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub -y org.mozilla.firefox com.discordapp.Discord com.github.tchx84.Flatseal io.github.alainm23.planify org.chromium.Chromium org.gnome.Lollypop org.signal.Signal
 
 
 sudo rm /etc/network/interfaces
-/sbin/shutdown -r now
+sudo /sbin/shutdown -r now
