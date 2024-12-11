@@ -3,7 +3,7 @@
 
 # Packages
 echo "defaultyes=True" | sudo tee -a /etc/dnf/dnf.conf
-sudo dnf install bash-completion gnome-shell-extension-dash-to-dock gnome-extensions-app https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
+sudo dnf install bash-completion gnome-shell-extension-dash-to-dock gnome-extensions-app vlc https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf remove totem
 sudo dnf update
 # Proprietary Stuff
