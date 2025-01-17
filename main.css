@@ -8,6 +8,7 @@ body {
 	background-color: #363635;
 	overflow: hidden;
 }
+
 #top_bar a {
 	float: left;
 	padding: 2.2mm 2.2mm;
@@ -17,9 +18,11 @@ body {
 	background-color: #363635;
 	color: white;
 }
+
 #article {
   max-width: 95%;
 }
+
 #top_bar a:hover {
 	background-color: white;
 	color: #363635;
