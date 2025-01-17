@@ -35,18 +35,14 @@ p {
 }
 
  /* Dropdown */
-
 #dropdown-button {
 	float: left;
 	padding: 2.2mm 2.2mm;
-
-
 	font-size: 14px;
 	font-weight: bold;
 	background-color: #363635;
 	color: white;
 	border: none;
-
 }
 #dropdown {
   position: relative;
@@ -58,5 +54,6 @@ p {
 }
 #dropdown:hover #dropdown-content {
   display: grid;
-width: 11%;
+  width: 70pt;
 }
+/* End of dropdown */
