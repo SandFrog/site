@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>fs</title>
@@ -5,24 +6,27 @@
 	<link rel="stylesheet" href="../main.css">
 </head>
 <body>
-  
-	<div id="top_bar">
-		<a href="../index.html">Home</a>
-		<div id="dropdown">
-		  <div id="dropdown-button">Linux Stuff</div>
-      <div id="dropdown-content">
-        <a href="fedora.html">Fedora</a>
-        <a href="debian.html">Debian</a>
-	    </div> 
-	  </div>
-	  <a href="../contact.html">Contact</a>
-	</div>
+  <nav class="navbar">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">☰</label>
+    <ul class="nav-list">
+      <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link">Linux Stuff ▾</a>
+        <div class="dropdown-content">
+          <a href="../linux/debian.html">Debian</a>
+          <a href="../linux/fedora.html">Fedora</a>
+        </div>
+      </li>  
+      <li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
+      <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
 
   <h2>Debian Setup Script</h2>
 
-	<p>This <a href="debian.sh">bash script</a> may be helpful for first time setup. As always, please read any bash script you find online, especially one that asks for superuser permissions.</p>
-	<p>P.S. I don't think this works right now</p>
+  <p>This <a href="debian.sh">bash script</a> may be helpful for first time setup. As always, please read any bash script you find online, especially one that asks for superuser permissions.</p>
+  <p>P.S. I don't think this works right now</p>
+
 </body>
 </html>
-
-

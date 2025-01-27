@@ -1,31 +1,7 @@
-body {
-	background-color: white;
-	margin: 0;
-	font-family: sans-serif;
-}
-
-#top_bar {
-	background-color: #363635;
-	overflow: hidden;
-}
-
-#top_bar a {
-	float: left;
-	padding: 2.2mm 2.2mm;
-	text-decoration: none;
-	font-size: 14px;
-	font-weight: bold;
-	background-color: #363635;
-	color: white;
-}
-
-#article {
-  max-width: 95%;
-}
-
-#top_bar a:hover {
-	background-color: white;
-	color: #363635;
+/* Reset default styles */
+* {
+  margin: 0;
+  font-family: sans-serif;
 }
 
 h1, h2, h3,
@@ -33,30 +9,115 @@ p {
 	margin: 3mm;
 }
 
-#center {
-  text-align: center;
+/* Navigation bar container */
+.navbar {
+  background-color: #333;
+  padding: 8px 10px;
+  position: relative;
+  font-weight: bold;
 }
 
- /* Dropdown */
-#dropdown-button {
-	float: left;
-	padding: 2.2mm 2.2mm;
-	font-size: 14px;
-	font-weight: bold;
-	background-color: #363635;
-	color: white;
-	border: none;
-}
-#dropdown {
-  position: relative;
-  display: inline-block;
-}
-#dropdown-content {
+/* Hide checkbox */
+.nav-toggle {
   display: none;
-  position: fixed;
 }
-#dropdown:hover #dropdown-content {
-  display: grid;
-  width: 70pt;
+
+/* Mobile menu label */
+.nav-toggle-label {
+  display: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
-/* End of dropdown */
+
+/* Main navigation list */
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+/* Navigation items */
+.nav-item {
+  position: relative;
+}
+
+/* Navigation links */
+.nav-link {
+  color: white;
+  text-decoration: none;
+	padding: 8px 10px;
+	font-size: 14px;
+}
+
+.nav-link:hover {
+	background-color: white;
+	color: #363635;
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 103px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  width: 100%;
+  margin-top: 7px; /* Add margin to create space between navbar and dropdown */
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 2.2mm 2.2mm;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .nav-link {
+  background-color: white;
+  color: #363635;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+  .nav-toggle-label {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    padding: 8px 10px;
+    gap: 2rem;
+  }
+
+  .nav-toggle:checked ~ .nav-list {
+    display: flex;
+  }
+
+  .dropdown-content {
+    position: static;
+    background-color: #363635;
+    padding: 1%;
+  }
+
+  .dropdown-content a {
+    color: white;
+  }
+}
