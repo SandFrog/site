@@ -24,7 +24,7 @@ gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Super>Tab']"
 gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
 gnome-extensions enable dash-to-dock@micxgx.gmail.com
-gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'LEFT'
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
 gsettings set org.gnome.shell.extensions.dash-to-dock show-trash false
 gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 42
 gsettings set org.gnome.shell.extensions.dash-to-dock custom-theme-shrink true
