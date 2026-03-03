@@ -34,6 +34,8 @@ if ! gnome-extensions enable ubuntu-appindicators@ubuntu.com &>/dev/null; then
 else
     #Gnome
     gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
+    gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"
     gsettings set org.gnome.desktop.interface color-scheme prefer-dark
     gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
     gnome-extensions enable ubuntu-appindicators@ubuntu.com
