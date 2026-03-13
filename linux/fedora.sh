@@ -10,7 +10,7 @@ sudo dnf update -y
 sudo dnf swap -y ffmpeg-free ffmpeg --allowerasing
 sudo dnf install -y libdvdcss rpmfusion-free-release-tainted
 sudo dnf update -y @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
-read -n1 -p "Would you want hardware accelerated codecs? Please select [I]ntel, [A]md, [N]vidia or [S]kip" doit 
+read -n1 -p "Do you want hardware accelerated codecs? Please select [I]ntel, [A]md, [N]vidia or [S]kip" doit 
 case $doit in  
   a|A) sudo dnf swap -y mesa-va-drivers mesa-va-drivers-freeworld && sudo dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld && sudo dnf swap -y mesa-va-drivers.i686 mesa-va-drivers-freeworld.i686 && sudo dnf swap -y mesa-vdpau-drivers.i686 mesa-vdpau-drivers-freeworld.i686 ;; 
   i|I) sudo dnf install -y intel-media-driver ;;
@@ -21,7 +21,9 @@ esac
 # Gnome
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
-gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Super>Tab']"
+gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
 gnome-extensions enable dash-to-dock@micxgx.gmail.com
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
